@@ -10,7 +10,7 @@ tenant_id = "c8db9708-98f7-4eb5-8e0e-62c710c8f34b"
 locals {
   prefix = "${var.organization}-${var.environment}-${var.application}-${var.tier}"
 }
-resource "azurerm_resource_group" "rgg" {
+resource "azurerm_resource_group1" "rgg1" {
   name     = "${local.prefix}-${var.rgname}"
   location = var.location
   tags = var.tagging
